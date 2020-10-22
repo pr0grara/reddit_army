@@ -13,9 +13,9 @@ const run = (async () => {
     await upvote(usersToBoost, page);
     await downvote(usersToHarm, page);
     console.log(`finished protocol for ${users[i].username}`)
+    await browser.close();
   }
   console.log('finished running')
-  await browser.close();
 })
 
 run();
